@@ -328,8 +328,18 @@ function eventHandler() {
 		touchRatio: 0.2,
 		slideToClickedSlide: true,
 		freeModeMomentum: true,
-
 	});
+	//luckyone js
+
+	//css vars
+	let topNav = document.querySelector(".top-nav--js");
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--top-nav-height', `${topNav.offsetHeight}px`);
+	}
+	window.addEventListener('resize', calcHeaderHeight, { passive: true });
+	window.addEventListener('scroll', calcHeaderHeight, { passive: true });
+	calcHeaderHeight();
+
 	// modal window
 
 };
